@@ -79,26 +79,28 @@ export function AssistantPanel() {
             ))}
           </div>
 
-          <div className="mt-6 rounded-[20px] border border-white/5 bg-[#0f1520] p-3">
-            <div className="flex items-center gap-3">
-              <Link
-                href="#"
-                className="flex h-12 flex-1 items-center rounded-2xl border border-white/5 bg-[#121926] px-4 text-sm text-[#6e7686]"
-              >
-                Type a message...
-              </Link>
-              <Link
-                href="#"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/5 bg-white/[0.04] text-[#8b91a0]"
-              >
-                ◎
-              </Link>
-              <Link
-                href="#"
-                className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#caa65b] text-[#161209] shadow-[0_10px_30px_rgba(202,166,91,0.35)]"
-              >
-                ➤
-              </Link>
+          <div className="mt-6 border-t border-white/5 pt-4">
+            <div className="rounded-[20px] border border-white/5 bg-[#0f1520] p-3">
+              <div className="flex items-center gap-3">
+                <Link
+                  href="#"
+                  className="flex h-12 flex-1 items-center rounded-2xl border border-white/5 bg-[#121926] px-4 text-sm text-[#6e7686]"
+                >
+                  Type a message...
+                </Link>
+                <Link
+                  href="#"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/5 bg-white/[0.04] text-[#8b91a0]"
+                >
+                  ◎
+                </Link>
+                <Link
+                  href="#"
+                  className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#caa65b] text-[#161209] shadow-[0_10px_30px_rgba(202,166,91,0.35)]"
+                >
+                  ➤
+                </Link>
+              </div>
             </div>
           </div>
         </div>

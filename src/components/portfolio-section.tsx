@@ -38,7 +38,7 @@ export function PortfolioSection() {
           <Link
             href="#"
             key={`${client.title}-${index}`}
-            className="grid grid-cols-[72px_1fr_84px] gap-3 rounded-[20px] border border-white/5 bg-[#121926] p-3"
+            className="grid min-w-0 grid-cols-[56px_minmax(0,1fr)_72px] items-center gap-3 rounded-[20px] border border-white/5 bg-[#121926] p-3"
           >
             <div className="relative h-14 w-14 overflow-hidden rounded-full border border-white/10">
               <Image src={client.avatar} alt={client.name} fill className="object-cover" unoptimized />
@@ -47,12 +47,12 @@ export function PortfolioSection() {
               <h3 className="truncate text-sm font-medium text-white">{client.title}</h3>
               <p className="mt-1 text-xs text-[#cfd5df]">{client.name}</p>
               <div className="mt-3 space-y-1 text-[11px] leading-4 text-[#9098a8]">
-                <p>Property Matches</p>
-                <p>Preferred Areas</p>
-                <p>Communication History</p>
+                <p className="truncate">Property Matches</p>
+                <p className="truncate">Preferred Areas</p>
+                <p className="truncate">Communication History</p>
               </div>
             </div>
-            <div className="relative overflow-hidden rounded-2xl border border-white/5">
+            <div className="relative h-16 w-[72px] overflow-hidden rounded-2xl border border-white/5">
               <Image src={client.property} alt={client.title} fill className="object-cover" unoptimized />
             </div>
           </Link>
