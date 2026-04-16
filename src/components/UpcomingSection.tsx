@@ -20,7 +20,7 @@ export function UpcomingSection() {
                 </div>
               ))}
             </div>
-            <span className="mt-4 inline-flex rounded-lg border border-[#b89756] px-3 py-2 text-xs font-semibold text-[#d8ba74]">
+            <span className="mt-4 inline-flex rounded-lg border border-[#d8ba74] px-3 py-2 text-xs font-semibold text-[#d8ba74]">
               {card.cta}
             </span>
           </a>

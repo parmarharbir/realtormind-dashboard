@@ -1,7 +1,7 @@
 const navItems = [
   { icon: "▦", label: "Grid" },
   { icon: "▣", label: "Document" },
-  { icon: "◉", label: "People" },
+  { icon: "◌", label: "People" },
   { icon: "⚙", label: "Settings" },
   { icon: "≣", label: "List" },
 ];

@@ -7,7 +7,7 @@ export const chatMessages = [
   {
     sender: "Kingpin AI",
     tone: "assistant",
-    text: "Found 3 highly qualified buyers for properties on Oak Street. Here is John Doe (approved $900K) and Sarah Chen (cash, $1.2M). Draft introductory email?",
+    text: "Found 3 highly qualified buyers for properties on Oak Street. Here is John Doe (approved $900K) & Sarah Chen (Cash, $1.2M). Draft introductory email?",
   },
   {
     sender: "Realtor",
@@ -26,13 +26,13 @@ export const pendingActions = [
   { label: "Contact staging & opportunities", count: 11 },
   { label: "Update communications", count: 4 },
   { label: "Automascagement", count: 7 },
-  { label: "Understabilization", count: 2 },
+  { label: "Understanabilization", count: 2 },
 ];
 
 export const quickTools = [
   "Quick Tools",
   "Quick Tools",
-  "New West installer",
+  "New West Installer",
   "Quick Chat",
   "Events",
 ];
@@ -75,44 +75,32 @@ export const leadCards = [
 
 export const clientCards = [
   {
-    name: "Client Profile",
-    person: "John Shen",
-    meta: ["Property Matches", "Preferred Areas", "Communication History"],
-    avatars: [
-      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=240&q=80",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=240&q=80",
-    ],
-    property: "John Shen",
+    title: "Client Profile",
+    name: "John Shen",
+    profileImage: "https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=240&q=80",
+    propertyImage: "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=500&q=80",
+    meta: ["Property Matches", "Preferred Areas", "Communication His..."],
   },
   {
-    name: "Sarah Profile",
-    person: "Sarah Profile",
-    meta: ["Property Matches", "Preferred Areas", "Communication History"],
-    avatars: [
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=240&q=80",
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&q=80",
-    ],
-    property: "Math Area",
+    title: "Sarah Profile",
+    name: "Sarah Crimino",
+    profileImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=240&q=80",
+    propertyImage: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=500&q=80",
+    meta: ["Property Matches", "Preferred Areas", "Communication His..."],
   },
   {
-    name: "Sarah Chenn",
-    person: "John Chen",
-    meta: ["Property Matches", "Preferred Areas", "Communication History"],
-    avatars: [
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=240&q=80",
-      "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=240&q=80",
-    ],
-    property: "Schedule Promote",
+    title: "Sarah Chenn",
+    name: "John Chen",
+    profileImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=240&q=80",
+    propertyImage: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=500&q=80",
+    meta: ["Property Matches", "Preferred Areas", "Communication His..."],
   },
   {
-    name: "Sur Profile",
-    person: "Property Insight",
-    meta: ["Property Matches", "Preferred Areas", "Communication History"],
-    avatars: [
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=240&q=80",
-      "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=240&q=80",
-    ],
-    property: "Preferred Area",
+    title: "Sur Profile",
+    name: "Scheduled Promote",
+    profileImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&q=80",
+    propertyImage: "https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=500&q=80",
+    meta: ["Property Matches", "Preferred Areas", "Communication His..."],
   },
 ];
 

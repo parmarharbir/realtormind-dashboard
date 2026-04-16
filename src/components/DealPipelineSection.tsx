@@ -14,12 +14,11 @@ export function DealPipelineSection() {
       <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
         {pipelineCards.map((card) => (
           <a key={card.title + card.stage} href="#" className="overflow-hidden rounded-[18px] border border-white/7 bg-[#151d29]">
-            <div className={`px-4 py-3 ${toneClass[card.tone]}`}>
-              <p className="text-sm font-semibold text-white">{card.title}</p>
-              <p className="text-xs text-white/70">{card.subtitle}</p>
-            </div>
+            <div className={`h-2.5 ${toneClass[card.tone]}`} />
             <div className="p-4">
-              <div className="mb-3 flex items-center justify-between text-sm text-white/80">
+              <p className="text-sm font-semibold text-white">{card.title}</p>
+              <p className="text-xs text-white/45">{card.subtitle}</p>
+              <div className="mb-3 mt-4 flex items-center justify-between text-sm text-white/80">
                 <span>{card.stage}</span>
                 <span className="font-semibold text-[#f1e1b0]">{card.progress}%</span>
               </div>
