@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const messages = [
   {
     role: "Realtor",
@@ -40,64 +42,82 @@ const quickTools = [
 
 export function AssistantPanel() {
   return (
-    <section className="rounded-[28px] border border-[#2b2416] bg-[#0f1522] p-4 shadow-[0_30px_80px_rgba(0,0,0,0.45)] lg:p-5">
-      <div className="rounded-[24px] border border-white/5 bg-[#131a28] p-5">
+    <section className="h-full rounded-[28px] border border-[#2b2416] bg-[#0f1522] p-4 shadow-[0_30px_80px_rgba(0,0,0,0.45)] lg:p-5">
+      <div className="flex h-full flex-col rounded-[24px] border border-white/5 bg-[#131a28] p-5">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <h1 className="text-[28px] font-semibold leading-tight text-[#f6f0e4]">
+            <Link href="#" className="text-[28px] font-semibold leading-tight text-[#f6f0e4]">
               Kingpin AI Assistant Command Center
-            </h1>
+            </Link>
             <p className="mt-1 text-sm text-[#8b8f99]">A refined, dark, elegant workspace</p>
           </div>
-          <div className="flex items-center gap-2 rounded-full border border-white/5 bg-white/[0.03] px-3 py-1.5 text-sm text-[#d7bd7a]">
+          <Link
+            href="#"
+            className="flex items-center gap-2 rounded-full border border-white/5 bg-white/[0.03] px-3 py-1.5 text-sm text-[#d7bd7a]"
+          >
             ♛ <span>Kingpin</span>
-          </div>
+          </Link>
         </div>
 
         <div className="mt-5 flex gap-5 border-b border-white/5 pb-3 text-sm">
-          <button className="border-b border-[#d0b06a] pb-2 font-medium text-[#f5ecd3]">Chat</button>
-          <button className="pb-2 text-[#737b88]">Ehaf</button>
+          <Link href="#" className="border-b border-[#d0b06a] pb-2 font-medium text-[#f5ecd3]">
+            Chat
+          </Link>
+          <Link href="#" className="pb-2 text-[#737b88] hover:text-white">
+            Ehaf
+          </Link>
         </div>
 
-        <div className="mt-4 rounded-[22px] border border-white/5 bg-[#111723] p-4">
-          <div className="space-y-4">
+        <div className="mt-4 flex min-h-0 flex-1 flex-col rounded-[22px] border border-white/5 bg-[#111723] p-4">
+          <div className="space-y-4 overflow-y-auto pr-1">
             {messages.map((message, index) => (
-              <div
+              <Link
+                href="#"
                 key={`${message.role}-${index}`}
-                className={`max-w-[88%] rounded-2xl px-4 py-3 text-sm leading-6 ${
+                className={`block max-w-[88%] rounded-2xl px-4 py-3 text-sm leading-6 ${
                   message.tone === "user"
-                    ? "bg-[#1a2432] text-[#dbe3ef]"
-                    : "bg-[#171d27] text-[#d5c48c]"
-                } ${message.tone === "user" ? "ml-auto" : "mr-auto"}`}
+                    ? "ml-auto bg-[#1a2432] text-[#dbe3ef]"
+                    : "mr-auto bg-[#171d27] text-[#d5c48c]"
+                }`}
               >
                 <span className="font-semibold">{message.role}:</span> {message.body}
-              </div>
+              </Link>
             ))}
           </div>
 
           <div className="mt-6 rounded-[20px] border border-white/5 bg-[#0f1520] p-3">
             <div className="flex items-center gap-3">
-              <input
-                readOnly
-                value="Type a message..."
-                className="h-12 flex-1 rounded-2xl border border-white/5 bg-[#121926] px-4 text-sm text-[#6e7686] outline-none"
-              />
-              <button className="flex h-11 w-11 items-center justify-center rounded-full border border-white/5 bg-white/[0.04] text-[#8b91a0]">
+              <Link
+                href="#"
+                className="flex h-12 flex-1 items-center rounded-2xl border border-white/5 bg-[#121926] px-4 text-sm text-[#6e7686]"
+              >
+                Type a message...
+              </Link>
+              <Link
+                href="#"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/5 bg-white/[0.04] text-[#8b91a0]"
+              >
                 ◎
-              </button>
-              <button className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#caa65b] text-[#161209] shadow-[0_10px_30px_rgba(202,166,91,0.35)]">
+              </Link>
+              <Link
+                href="#"
+                className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#caa65b] text-[#161209] shadow-[0_10px_30px_rgba(202,166,91,0.35)]"
+              >
                 ➤
-              </button>
+              </Link>
             </div>
           </div>
         </div>
 
         <div className="mt-5 grid gap-4 lg:grid-cols-2">
           <div className="rounded-[22px] border border-white/5 bg-[#111723] p-4">
-            <h2 className="text-sm font-semibold text-[#f4ead0]">Pending Actions</h2>
+            <Link href="#" className="text-sm font-semibold text-[#f4ead0]">
+              Pending Actions
+            </Link>
             <div className="mt-3 space-y-2">
               {pendingActions.map(([label, count]) => (
-                <div
+                <Link
+                  href="#"
                   key={label}
                   className="flex items-center justify-between rounded-2xl border border-white/5 bg-white/[0.02] px-3 py-2.5 text-sm text-[#b4bac4]"
                 >
@@ -105,22 +125,25 @@ export function AssistantPanel() {
                   <span className="rounded-full border border-white/5 bg-white/[0.03] px-2 py-0.5 text-xs text-[#f2e4b6]">
                     {count}
                   </span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
 
           <div className="rounded-[22px] border border-white/5 bg-[#111723] p-4">
-            <h2 className="text-sm font-semibold text-[#f4ead0]">Quick Tools</h2>
+            <Link href="#" className="text-sm font-semibold text-[#f4ead0]">
+              Quick Tools
+            </Link>
             <div className="mt-3 space-y-2">
-              {quickTools.map((label) => (
-                <div
-                  key={label}
+              {quickTools.map((label, index) => (
+                <Link
+                  href="#"
+                  key={`${label}-${index}`}
                   className="flex items-center justify-between rounded-2xl border border-white/5 bg-white/[0.02] px-3 py-2.5 text-sm text-[#b4bac4]"
                 >
                   <span>{label}</span>
                   <span className="text-[#7c8491]">›</span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

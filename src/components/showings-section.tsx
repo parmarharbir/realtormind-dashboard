@@ -1,9 +1,10 @@
+import Link from "next/link";
 import { SectionHeader } from "@/components/section-header";
 
 const items = [
   {
     title: "Scheduled Viewings",
-    lines: ["Thursday : 10:30 am", "1:00 pm - 2:30 pm", "1:30 am - 7:00 pm"],
+    lines: ["Thursday", "10:30 am", "1:00 pm - 2:30 pm", "1:30 pm - 7:00 pm"],
     cta: "Scheduled Viewing",
   },
   {
@@ -29,7 +30,8 @@ export function ShowingsSection() {
       <SectionHeader title="Upcoming Showings & Follow-ups" />
       <div className="grid gap-3 xl:grid-cols-4 md:grid-cols-2">
         {items.map((item, index) => (
-          <article
+          <Link
+            href="#"
             key={`${item.title}-${index}`}
             className="rounded-[20px] border border-white/5 bg-[#121926] p-4"
           >
@@ -42,15 +44,18 @@ export function ShowingsSection() {
             </div>
 
             <div className="mt-4 space-y-2 text-[12px] leading-5 text-[#b4bac6]">
-              {item.lines.map((line) => (
-                <p key={line}>{line}</p>
+              {item.lines.map((line, lineIndex) => (
+                <div key={line} className="flex items-center gap-2">
+                  <span className="text-[#d2b06b]">{lineIndex === 0 ? "🗓" : "•"}</span>
+                  <span>{line}</span>
+                </div>
               ))}
             </div>
 
-            <button className="mt-5 rounded-xl bg-[#c9a458] px-3 py-2 text-xs font-medium text-[#161209] shadow-[0_8px_24px_rgba(201,164,88,0.28)]">
+            <span className="mt-5 inline-flex rounded-xl border border-[#c9a458] px-3 py-2 text-xs font-medium text-[#d9bc7a]">
               {item.cta}
-            </button>
-          </article>
+            </span>
+          </Link>
         ))}
       </div>
     </section>

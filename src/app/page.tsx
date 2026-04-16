@@ -13,8 +13,10 @@ export default function Home() {
       <div className="mx-auto flex min-h-screen max-w-[1600px] gap-4 p-4 lg:p-5">
         <SidebarRail />
 
-        <div className="grid flex-1 gap-4 xl:grid-cols-[0.98fr_1.12fr]">
-          <AssistantPanel />
+        <div className="grid flex-1 gap-4 xl:grid-cols-[520px_minmax(0,1fr)]">
+          <div className="xl:sticky xl:top-5 xl:h-[calc(100vh-2.5rem)]">
+            <AssistantPanel />
+          </div>
 
           <section className="rounded-[28px] border border-[#2b2416] bg-[#0f1522] shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
             <DashboardNav />
