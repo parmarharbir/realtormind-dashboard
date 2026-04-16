@@ -39,18 +39,24 @@ export function HotLeadsSection() {
                 </div>
               </div>
             </div>
-            <div className="space-y-2 px-3 pb-3 pt-2 text-[11px] text-[#98a0af]">
-              <div className="flex items-center justify-between gap-2">
-                <span>Contact Frequency</span>
-                <span>Interest Score</span>
-                <span>Next Best Action</span>
-              </div>
-              <div className="flex items-center justify-between gap-2 text-[#e7ddc4]">
-                <span>Weekly</span>
-                <span className="rounded-full border border-[#4e572c] bg-[#1e2b18] px-2 py-0.5 text-[#bfe082]">
-                  {lead.score}
-                </span>
-                <span>Draft Email</span>
+            <div className="px-3 pb-3 pt-2 text-[11px] text-[#98a0af]">
+              <div className="grid grid-cols-3 items-center gap-2 rounded-xl border border-white/5 bg-white/[0.02] px-2 py-2 text-center">
+                <div className="min-w-0 border-r border-white/8 pr-2">
+                  <p className="truncate">Contact Frequency</p>
+                  <p className="mt-1 text-[#e7ddc4]">Weekly</p>
+                </div>
+                <div className="min-w-0 border-r border-white/8 px-2">
+                  <p className="truncate">Interest Score</p>
+                  <p className="mt-1">
+                    <span className="rounded-full border border-[#4e572c] bg-[#1e2b18] px-2 py-0.5 text-[#bfe082]">
+                      {lead.score}
+                    </span>
+                  </p>
+                </div>
+                <div className="min-w-0 pl-2">
+                  <p className="truncate">Next Best Action</p>
+                  <p className="mt-1 truncate text-[#e7ddc4]">Draft Email</p>
+                </div>
               </div>
             </div>
           </Link>

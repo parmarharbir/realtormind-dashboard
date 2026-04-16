@@ -27,18 +27,12 @@ const messages = [
 const pendingActions = [
   ["Hot Leads & opportunities", "0"],
   ["Contact staging & opportunities", "11"],
-  ["Update communications", "3"],
+  ["Update communications", "4"],
   ["Automascagement", "2"],
   ["Understabilization", "7"],
 ];
 
-const quickTools = [
-  "Quick Tools",
-  "Quick Tools",
-  "New Hot Insider",
-  "Quick Chat",
-  "Events",
-];
+const quickTools = ["Quick Tools", "New West Installer", "Quick Chat", "Events"];
 
 export function AssistantPanel() {
   return (
@@ -68,8 +62,8 @@ export function AssistantPanel() {
           </Link>
         </div>
 
-        <div className="mt-4 flex min-h-0 flex-1 flex-col rounded-[22px] border border-white/5 bg-[#111723] p-4">
-          <div className="space-y-4 overflow-y-auto pr-1">
+        <div className="mt-4 rounded-[22px] border border-white/5 bg-[#111723] p-4">
+          <div className="space-y-4">
             {messages.map((message, index) => (
               <Link
                 href="#"
@@ -135,10 +129,10 @@ export function AssistantPanel() {
               Quick Tools
             </Link>
             <div className="mt-3 space-y-2">
-              {quickTools.map((label, index) => (
+              {quickTools.map((label) => (
                 <Link
                   href="#"
-                  key={`${label}-${index}`}
+                  key={label}
                   className="flex items-center justify-between rounded-2xl border border-white/5 bg-white/[0.02] px-3 py-2.5 text-sm text-[#b4bac4]"
                 >
                   <span>{label}</span>
