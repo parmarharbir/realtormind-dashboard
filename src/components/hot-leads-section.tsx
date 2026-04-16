@@ -13,7 +13,7 @@ export function HotLeadsSection() {
   return (
     <section>
       <SectionHeader title="Hot Leads & Opportunities" />
-      <div className="grid gap-3 md:grid-cols-2 2xl:grid-cols-4 xl:grid-cols-2">
+      <div className="grid gap-3 xl:grid-cols-4 md:grid-cols-2">
         {leads.map((lead, index) => (
           <Link
             href="#"
@@ -34,23 +34,21 @@ export function HotLeadsSection() {
                 <p className="text-sm font-medium text-white">{lead.name}</p>
               </div>
             </div>
-            <div className="px-3 pb-3 pt-2 text-[10px] text-[#98a0af] 2xl:text-[11px]">
-              <div className="grid grid-cols-[1.15fr_0.9fr_1.1fr] items-center gap-1 rounded-xl border border-white/5 bg-white/[0.02] px-2 py-2 text-center">
-                <div className="min-w-0 border-r border-white/8 pr-2">
-                  <p className="whitespace-nowrap text-[9px] 2xl:text-[10px]">Contact Frequency</p>
-                  <p className="mt-1 text-[#e7ddc4]">Weekly</p>
+            <div className="px-3 pb-3 pt-2 text-[11px] text-[#98a0af]">
+              <div className="space-y-2 rounded-xl border border-white/5 bg-white/[0.02] px-3 py-3">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-[#98a0af]">Contact Frequency</span>
+                  <span className="text-[#e7ddc4]">Weekly</span>
                 </div>
-                <div className="min-w-0 border-r border-white/8 px-2">
-                  <p className="whitespace-nowrap text-[9px] 2xl:text-[10px]">Interest Score</p>
-                  <p className="mt-1">
-                    <span className={`rounded-full px-2 py-0.5 ${lead.badge === "green" ? "border border-[#4e572c] bg-[#1e2b18] text-[#bfe082]" : "border border-[#6a5526] bg-[#2f2411] text-[#e7d4a1]"}`}>
-                      {lead.score}
-                    </span>
-                  </p>
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-[#98a0af]">Interest Score</span>
+                  <span className={`rounded-full px-2 py-0.5 ${lead.badge === "green" ? "border border-[#4e572c] bg-[#1e2b18] text-[#bfe082]" : "border border-[#6a5526] bg-[#2f2411] text-[#e7d4a1]"}`}>
+                    {lead.score}
+                  </span>
                 </div>
-                <div className="min-w-0 pl-2">
-                  <p className="whitespace-nowrap text-[9px] 2xl:text-[10px]">Next Best Action</p>
-                  <p className="mt-1 whitespace-nowrap text-[#e7ddc4]">Draft Email</p>
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-[#98a0af]">Next Best Action</span>
+                  <span className="text-[#e7ddc4]">Draft Email</span>
                 </div>
               </div>
             </div>

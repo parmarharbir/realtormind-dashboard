@@ -24,16 +24,6 @@ const messages = [
   },
 ];
 
-const pendingActions = [
-  ["Hot Leads & opportunities", "0"],
-  ["Contact staging & opportunities", "11"],
-  ["Update communications", "4"],
-  ["Automascagement", "7"],
-  ["Understanabilization", "2"],
-];
-
-const quickTools = ["Quick Tools", "New West Installer", "Quick Chat", "Events"];
-
 export function AssistantPanel() {
   return (
     <section className="h-full rounded-[28px] border border-[#2b2416] bg-[#0f1522] p-4 shadow-[0_30px_80px_rgba(0,0,0,0.45)] lg:p-5">
@@ -62,7 +52,7 @@ export function AssistantPanel() {
           </Link>
         </div>
 
-        <div className="mt-4 flex min-h-0 flex-[0_0_70%] flex-col rounded-[22px] border border-white/5 bg-[#111723] p-4">
+        <div className="mt-4 flex min-h-0 flex-1 flex-col rounded-[22px] border border-white/5 bg-[#111723] p-4">
           <div className="flex-1 space-y-4 overflow-hidden">
             {messages.map((message, index) => (
               <Link
@@ -101,46 +91,6 @@ export function AssistantPanel() {
                   ➤
                 </Link>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-4 grid flex-[0_0_30%] gap-4 lg:grid-cols-2">
-          <div className="rounded-[22px] border border-white/5 bg-[#111723] p-4">
-            <Link href="#" className="text-sm font-semibold text-[#f4ead0]">
-              Pending Actions
-            </Link>
-            <div className="mt-3 space-y-2">
-              {pendingActions.map(([label, count]) => (
-                <Link
-                  href="#"
-                  key={label}
-                  className="flex items-center justify-between rounded-2xl border border-white/5 bg-white/[0.02] px-3 py-2 text-sm text-[#b4bac4]"
-                >
-                  <span>{label}</span>
-                  <span className="rounded-full border border-white/5 bg-white/[0.03] px-2 py-0.5 text-xs text-[#f2e4b6]">
-                    {count}
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div className="rounded-[22px] border border-white/5 bg-[#111723] p-4">
-            <Link href="#" className="text-sm font-semibold text-[#f4ead0]">
-              Quick Tools
-            </Link>
-            <div className="mt-3 space-y-2">
-              {quickTools.map((label) => (
-                <Link
-                  href="#"
-                  key={label}
-                  className="flex items-center justify-between rounded-2xl border border-white/5 bg-white/[0.02] px-3 py-2 text-sm text-[#b4bac4]"
-                >
-                  <span>{label}</span>
-                  <span className="text-[#7c8491]">›</span>
-                </Link>
-              ))}
             </div>
           </div>
         </div>
