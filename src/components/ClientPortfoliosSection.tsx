@@ -28,7 +28,6 @@ export function ClientPortfoliosSection() {
                 <p key={item}>{item}</p>
               ))}
             </div>
-            <p className="mt-4 text-xs text-[#d8ba74]">{client.property}</p>
           </a>
         ))}
       </div>

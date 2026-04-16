@@ -16,12 +16,12 @@ export function LeadCardsSection() {
                 <p className="text-sm font-semibold text-white">{lead.name}</p>
                 <span className={`rounded-full px-2.5 py-1 text-[11px] font-semibold ${lead.scoreTone === "green" ? "bg-emerald-500/18 text-emerald-300" : "bg-[#c6a86a]/18 text-[#e7d4a1]"}`}>{lead.score}</span>
               </div>
-              <div className="mt-3 flex items-center gap-2 text-[11px] text-white/45">
-                <span>{lead.metrics[0]}</span>
+              <div className="mt-3 flex flex-nowrap items-center gap-2 overflow-hidden text-[10px] text-white/45 sm:text-[11px]">
+                <span className="whitespace-nowrap">{lead.metrics[0]}</span>
                 <span>|</span>
-                <span>{lead.metrics[1]}</span>
+                <span className="whitespace-nowrap">{lead.metrics[1]}</span>
                 <span>|</span>
-                <span>{lead.metrics[2]}</span>
+                <span className="whitespace-nowrap">{lead.metrics[2]}</span>
               </div>
             </div>
           </a>
