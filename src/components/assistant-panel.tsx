@@ -28,8 +28,8 @@ const pendingActions = [
   ["Hot Leads & opportunities", "0"],
   ["Contact staging & opportunities", "11"],
   ["Update communications", "4"],
-  ["Automascagement", "2"],
-  ["Understabilization", "7"],
+  ["Automascagement", "7"],
+  ["Understanabilization", "2"],
 ];
 
 const quickTools = ["Quick Tools", "New West Installer", "Quick Chat", "Events"];
@@ -37,7 +37,7 @@ const quickTools = ["Quick Tools", "New West Installer", "Quick Chat", "Events"]
 export function AssistantPanel() {
   return (
     <section className="h-full rounded-[28px] border border-[#2b2416] bg-[#0f1522] p-4 shadow-[0_30px_80px_rgba(0,0,0,0.45)] lg:p-5">
-      <div className="flex h-full flex-col rounded-[24px] border border-white/5 bg-[#131a28] p-5">
+      <div className="flex h-full min-h-[calc(100vh-3.75rem)] flex-col rounded-[24px] border border-white/5 bg-[#131a28] p-5">
         <div className="flex items-start justify-between gap-4">
           <div>
             <Link href="#" className="text-[28px] font-semibold leading-tight text-[#f6f0e4]">
@@ -58,17 +58,17 @@ export function AssistantPanel() {
             Chat
           </Link>
           <Link href="#" className="pb-2 text-[#737b88] hover:text-white">
-            Ehaf
+            Chat
           </Link>
         </div>
 
-        <div className="mt-4 rounded-[22px] border border-white/5 bg-[#111723] p-4">
-          <div className="space-y-4">
+        <div className="mt-4 flex min-h-0 flex-[0_0_70%] flex-col rounded-[22px] border border-white/5 bg-[#111723] p-4">
+          <div className="flex-1 space-y-4 overflow-hidden">
             {messages.map((message, index) => (
               <Link
                 href="#"
                 key={`${message.role}-${index}`}
-                className={`block max-w-[88%] rounded-2xl px-4 py-3 text-sm leading-6 ${
+                className={`block max-w-[92%] rounded-2xl px-4 py-3 text-sm leading-6 ${
                   message.tone === "user"
                     ? "ml-auto bg-[#1a2432] text-[#dbe3ef]"
                     : "mr-auto bg-[#171d27] text-[#d5c48c]"
@@ -103,7 +103,7 @@ export function AssistantPanel() {
           </div>
         </div>
 
-        <div className="mt-5 grid gap-4 lg:grid-cols-2">
+        <div className="mt-4 grid flex-[0_0_30%] gap-4 lg:grid-cols-2">
           <div className="rounded-[22px] border border-white/5 bg-[#111723] p-4">
             <Link href="#" className="text-sm font-semibold text-[#f4ead0]">
               Pending Actions
@@ -113,7 +113,7 @@ export function AssistantPanel() {
                 <Link
                   href="#"
                   key={label}
-                  className="flex items-center justify-between rounded-2xl border border-white/5 bg-white/[0.02] px-3 py-2.5 text-sm text-[#b4bac4]"
+                  className="flex items-center justify-between rounded-2xl border border-white/5 bg-white/[0.02] px-3 py-2 text-sm text-[#b4bac4]"
                 >
                   <span>{label}</span>
                   <span className="rounded-full border border-white/5 bg-white/[0.03] px-2 py-0.5 text-xs text-[#f2e4b6]">
@@ -133,7 +133,7 @@ export function AssistantPanel() {
                 <Link
                   href="#"
                   key={label}
-                  className="flex items-center justify-between rounded-2xl border border-white/5 bg-white/[0.02] px-3 py-2.5 text-sm text-[#b4bac4]"
+                  className="flex items-center justify-between rounded-2xl border border-white/5 bg-white/[0.02] px-3 py-2 text-sm text-[#b4bac4]"
                 >
                   <span>{label}</span>
                   <span className="text-[#7c8491]">›</span>
